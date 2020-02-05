@@ -1,4 +1,4 @@
-#include <stlib.h>
+#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -9,8 +9,8 @@
 int main(void)
 {
 
-	char string = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	const char* string = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
-	write(2, string, strlen(string);
+	write(2, string, strlen(string));
 	return (1);
 }
