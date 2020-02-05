@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
-*main - uses the command printf
-*Return: 0
+* main - uses the command printf
+* Return: 0
 **/
 
 int main(void)
