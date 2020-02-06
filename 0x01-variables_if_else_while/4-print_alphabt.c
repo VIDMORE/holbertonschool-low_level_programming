@@ -1,10 +1,15 @@
 #include <stdio.h>
 
+/**
+* main - function to print the alphabet without e and q letters
+* Return: 0
+**/
+
 int main(void)
 {
 	char c;
 
-	for(c = 'a'; c <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		if (c != 'e' && c != 'q')
 		{
@@ -16,6 +21,5 @@ int main(void)
 			putchar('\n');
 		}
 	}
-	
 	return (0);
 }
