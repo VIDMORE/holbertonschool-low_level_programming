@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+* main - function to print the alphabet twice
+* Return: 0
+**/
+
 int main(void)
 {
 	char c;
@@ -14,12 +19,9 @@ int main(void)
 			{
 				putchar(uc);
 				if (uc == 'Z')
-				{       
-					 putchar('\n');
-		                 }
+					putchar('\n');
 			}
 		}
 	}
-	
 	return (0);
 }
