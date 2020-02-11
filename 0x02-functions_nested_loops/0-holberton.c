@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char i[] = "Holberton";
+	char i[9] = "Holberton";
 	int counter;
 	
 	for (counter = 0; counter <= 9 ; counter++)
