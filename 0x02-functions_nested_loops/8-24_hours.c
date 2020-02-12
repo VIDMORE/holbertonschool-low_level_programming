@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-*
+* jack_bauer - print the hole hours of a day
 *
 **/
 
