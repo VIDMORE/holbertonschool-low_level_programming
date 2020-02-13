@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* print_diagonal - print a back slash
+* @n: number of spaces
+**/
+
 void print_diagonal(int n)
 {
 	int i;
@@ -15,11 +20,9 @@ void print_diagonal(int n)
 				{
 					_putchar(' ');
 				}
-
 				_putchar('\\');
 				_putchar('\n');
 			}
-
 		}
 	}
 	else
