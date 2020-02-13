@@ -1,5 +1,5 @@
 /**
-* _isdigit - know if a variable have a digit 
+* _isdigit - know if a variable have a digit
 * Return: 0
 * @c: random value
 **/
