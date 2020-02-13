@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* print_square - print a square
+* @size: size of the square
+**/
+
 void print_square(int size)
 {
 	int face_a, face_b;
