@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_triangle - print a pyramid 
+ * print_triangle - print a pyramid
  * @size: size of the pyramid
  **/
 
@@ -13,7 +13,7 @@ void print_triangle(int size)
 
 	if (size > 0)
 	{
-		for (i = 0; i < size; i++)	
+		for (i = 0; i < size; i++)
 		{
 			for (a = (size - 1); a >= i; a--)
 			{
