@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* print_line - print lines
+* @n: number of lines
+**/
+
 void print_line(int n)
 {
 	int i;
@@ -18,5 +23,4 @@ void print_line(int n)
 	{
 		_putchar('\n');
 	}
-	
 }
