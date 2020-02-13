@@ -1,26 +1,35 @@
 #include "holberton.h"
 
-void print_diagonal(int n)
+/**
+ * print_triangle - print a pyramid 
+ * @size: size of the pyramid
+ **/
+
+void print_triangle(int size)
 {
 	int i;
 	int a;
+	int z;
 
-	if (n > 0)
+	if (size > 0)
 	{
-		for (i = 0; i <= n; i++)	
+		for (i = 0; i < size; i++)	
 		{
-			
-			if (i != 0)
+			for (a = (size - 1); a >= i; a--)
 			{
-				for (a = 0; a < i; a++)
+				if (a == i)
+				{
+					for (z = 0; z <= i; z++)
+					{
+						_putchar('#');
+					}
+				}
+				else
 				{
 					_putchar(' ');
 				}
-
-				_putchar('\\');
-				_putchar('\n');
 			}
-
+			_putchar('\n');
 		}
 	}
 	else
