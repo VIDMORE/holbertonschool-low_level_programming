@@ -1,6 +1,6 @@
 /**
-* add - add two number
-* Return: the last number
+* mul - multiply two numbers
+* Return: multiply
 * @a: value #1
 * @b: value #2
 **/
