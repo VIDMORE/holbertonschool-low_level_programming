@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* print_numbers - print numbera
+*
+**/
+
 void print_numbers(void)
 {
 	int i;
