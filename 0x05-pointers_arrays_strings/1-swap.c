@@ -1,7 +1,7 @@
 /**
 * swap_int - function that swaps the values of two integers
-* @*a: value a
-* @*b: value b
+* @a: value a
+* @b: value b
 **/
 
 void swap_int(int *a, int *b)
