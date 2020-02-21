@@ -17,6 +17,7 @@ char *rot13(char *a)
 			if (rot[j] == a[i])
 			{
 				a[i] = tor[j];
+				break;
 			}
 		}
 	}
