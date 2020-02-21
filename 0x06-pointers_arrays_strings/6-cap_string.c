@@ -6,43 +6,21 @@
 
 char *cap_string(char *a)
 {
-	int i;
+	int i, j;
+	char ex[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		switch (a[i])
+		for (j = 0; j <= 9; j++)
 		{
-			i++;
-			case '}':
-				a[i] = (a[i] - 32);
-				break;
-			case ',':
-				a[i] = (a[i] - 32);
-				break;
-			case ';':
-				a[i] = (a[i] - 32);
-				break;
-			case '.':
-				a[i] = (a[i] - 32);
-				break;
-			case '!':
-				a[i] = (a[i] - 32);
-				break;
-			case '?':
-				a[i] = (a[i] - 32);
-				break;
-			case '\\':
-				a[i] = (a[i] - 32);
-				break;
-			case '(':
-				a[i] = (a[i] - 32);
-				break;
-			case ')':
-				a[i] = (a[i] - 32);
-				break;
-			case '{':
-				a[i] = (a[i] - 32);
-				break;
+			if (ex[j] == a[i])
+			{
+				i++;
+				if (a[i] == ' ')
+					i++;
+				if (a[i] >= 'a' && a[i] <= 'z')
+					a[i] -= 32;
+			}
 		}
 	}
 	return (a);
