@@ -1,5 +1,5 @@
 /**
-* cap_string - function that capitalizes all words of a string
+* leet - function that encodes a string into 1337
 * @a: string
 * Return: string changed
 **/
