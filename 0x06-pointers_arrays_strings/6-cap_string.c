@@ -10,10 +10,39 @@ char *cap_string(char *a)
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		if (a[i] == ',' || a[i] == ';' || a[i] == '.' || a[i] == '!' || a[i] == '?' || a[i] == '"' || a[i] == '(' || a[i] == ')' || a[i] == '{' || a[i] == '}')
-		{	
+		switch (a[i])
+		{
 			i++;
-			a[i] = (a[i] - 32);
+			case '}':
+				a[i] = (a[i] - 32);
+				break;
+			case ',':
+				a[i] = (a[i] - 32);
+				break;
+			case ';':
+				a[i] = (a[i] - 32);
+				break;
+			case '.':
+				a[i] = (a[i] - 32);
+				break;
+			case '!':
+				a[i] = (a[i] - 32);
+				break;
+			case '?':
+				a[i] = (a[i] - 32);
+				break;
+			case '\\':
+				a[i] = (a[i] - 32);
+				break;
+			case '(':
+				a[i] = (a[i] - 32);
+				break;
+			case ')':
+				a[i] = (a[i] - 32);
+				break;
+			case '{':
+				a[i] = (a[i] - 32);
+				break;
 		}
 	}
 	return (a);
