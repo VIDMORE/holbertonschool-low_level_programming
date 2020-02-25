@@ -1,15 +1,10 @@
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * set_string - check the code for Holberton School students.
+ * @s: string #1
+ * @to: string #2
  */
 
 void set_string(char **s, char *to)
 {
-	int = 0;
-
-	for (i = 0; to[i]; i++)
-	{
-		to[] =
-	}
+	*s = to;
 }
