@@ -11,6 +11,17 @@ int wildcmp(char *s1, char *s2)
 	int compare(si, s2);
 }
 
+
+int breake_wild(char *s2)
+{
+
+	if (*s != '\0')
+	{
+		
+	}
+
+}
+
 /**
 * compare - compare the two arrays
 * @s1: first array
