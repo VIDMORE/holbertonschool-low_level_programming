@@ -12,4 +12,4 @@ int is_palindrome(char *s);
 int compare(char *ar, int size, int value);
 int get_lenght(char *s);
 int wildcmp(char *s1, char *s2);
-int compare(int *s1, int *s2);
+
