@@ -13,25 +13,25 @@ int is_number(char *s);
 
 int main(int argc, char *argv[])
 {
-	if (!is_number(argv[1]))
+	if (argc < 2 && argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (argc < 2 && argc <= 1)
+	else if (argv[1])
 	{
-		printf("Error\n");
-		return (1);
+		if (atoi(argv[1]) < 0)
+		{
+			printf("0");
+			return (0);
+		}
+		else if (!is_number(argv[1]))
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
-	else if (atoi(argv[1]) < 0)
-	{
-		printf("0");
-		return (0);
-	}
-	else
-	{
-		printf("%d\n", check_change(atoi(argv[1])));
-	}
+	printf("%d\n", check_change(atoi(argv[1])));
 	return (0);
 }
 
