@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 int check_change(int money);
+int is_number(char *s);
 
 /**
- * main - program that adds positive numbers.
+ * main - Program that prints the minimum number of coins to make change.
  * @argc: Number of arguments
  * @argv: Array of arguments
  * Return: 0.
@@ -12,7 +13,12 @@ int check_change(int money);
 
 int main(int argc, char *argv[])
 {
-	if (argc < 2 && argc <= 1)
+	if (!is_number(argv[1]))
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else if (argc < 2 && argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
@@ -28,6 +34,12 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+
+/**
+ * check_change - checks the total amount of change
+ * @money: total entered
+ * Return: Minimum number of coins to make change
+ **/
 
 int check_change(int money)
 {
@@ -47,4 +59,22 @@ int check_change(int money)
 		}
 	}
 	return (count);
+}
+
+/**
+ * is_number - validate if a string is number
+ * @s: string
+ * Return: 1 if true, 0 if false
+ **/
+
+int is_number(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (!isdigit(s[i]))
+			return (0);
+	}
+	return (1);
 }
