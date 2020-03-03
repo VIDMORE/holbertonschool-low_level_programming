@@ -30,7 +30,7 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, size_1, size_2, full_size;
+	int i, size_1, size_2, full_size;
 	char *ar;
 
 	if (s1 == NULL)
