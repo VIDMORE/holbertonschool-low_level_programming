@@ -30,11 +30,15 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	int i, j, size_1, size_2, full_size;
-	char *ar;
+	char *ar, *empty = "";
 
-	if (s1 == 0 && s2 == 0)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = empty;
+	}
+	else if (s1 == NULL)
+	{
+		s2 = empty;
 	}
 	size_1 = _strlen(s1);
 	size_2 = _strlen(s2);
