@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 int _strlen(char *s);
@@ -30,15 +31,15 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	int i, j, size_1, size_2, full_size;
-	char *ar, *empty = "\0";
+	char *ar;
 
 	if (s1 == NULL)
 	{
-		s1 = empty;
+		s1 = "";
 	}
 	else if (s1 == NULL)
 	{
-		s2 = empty;
+		s2 = "";
 	}
 	size_1 = _strlen(s1);
 	size_2 = _strlen(s2);
