@@ -55,10 +55,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		ar[i] = s1[i];
 	}
-	for (j = i, i = 0; j < full_size; j++, i++)
+	for (i = 0; i < size_2; i++)
 	{
-		ar[j] = s2[i];
+		ar[size_1 + i] = s2[i];
 	}
-	ar[j] = '\0';
+	ar[total_size + 1] = '\0';
 	return (ar);
 }
