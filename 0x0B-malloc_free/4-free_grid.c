@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include <stdlib.h>
 
 /**
  * free_grid - function that frees a 2 dimensional grid
@@ -7,7 +7,9 @@
  */
 void free_grid(int **grid, int height)
 {
-	for (i = heigh - 1; height > 0; height--)
+	int i;
+
+	for (i = height - 1; height > 0; height--)
 		free(grid[i]);
 	free(grid);
 }
