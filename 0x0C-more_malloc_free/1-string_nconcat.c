@@ -1,67 +1,45 @@
-#include "holberton.h"
-#include <stdlib.h>
-
-int _strlen(char *s);
-
+nclude <stdlib.h>
+#include <string.h>
 /**
- * _strlen - returns the length of a string.
- * @s: string input.
- * Return: length of an string.
+ * string_nconcat - string_nconcat
+ * @s1: s1
+ * @s2: s2
+ * @n: n
+ * Return: c
  */
-int _strlen(char *s)
-{
-	int length;
-
-	length = 0;
-
-	while (s[length] != '\0')
-	{
-		length++;
-	}
-
-	return (length);
-}
-
-/**
- * *string_nconcat - function that concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: integer
- * Return: pointer should point to a newly allocated space in memory which
- * contains the contents of s1, followed by the contents of s2 ending with null
- * return NULL on failure
- */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, size_s1, size_s2, total_size;
-	char *new_arr;
+	unsigned int longs1 = 0, longs2 = 0, i, r = 0;
+	char *c;
+	char *e = "";
 
 	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	size_s1 = _strlen(s1);
-	size_s2 = _strlen(s2);
-	if (n < size_s2)
-	{
-		size_s2 = n;
-	}
-	total_size = size_s1 + size_s2;
+		s1 = e;
 
-	new_arr = malloc((total_size));
-	if (new_arr == NULL)
-	{
+	if (s2 == NULL)
+		s2 = e;
+
+	for (i = 0; s1[i] != '\0'; i++)
+		longs1 += 1;
+
+	for (i = 0; s2[i] != '\0'; i++)
+		longs2 += 1;
+
+	if (n < longs2)
+		longs2 = n;
+
+	c = malloc(longs1 + longs2 + 1);
+
+	if (c == NULL)
 		return (NULL);
-	}
-	for (i = 0 ; i < size_s1 ; i++)
-	{
-		new_arr[i] = s1[i];
-	}
-	for (i = 0 ; i < size_s2; i++)
-	{
-		new_arr[size_s1 + i] = s2[i];
-	}
-	new_arr[total_size] = '\0';
-	return (new_arr);
+
+	for (i = 0; s1[i] != '\0'; i++, r++)
+		c[i] = s1[i];
+
+	for (i = 0; i < longs2; i++, r++)
+		c[r] = s2[i];
+
+	c[r] = '\0';
+
+	return (c);
 }
