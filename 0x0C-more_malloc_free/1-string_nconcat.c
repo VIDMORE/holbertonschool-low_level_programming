@@ -49,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	total_size = size_s1 + size_s2;
 
-	new_arr = malloc((total_size * sizeof(char)));
+	new_arr = malloc((total_size));
 	if (new_arr == NULL)
 	{
 		return (NULL);
@@ -62,6 +62,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		new_arr[size_s1 + i] = s2[i];
 	}
-	new_arr[total_size + 1] = '\0';
+	new_arr[total_size] = '\0';
 	return (new_arr);
 }
