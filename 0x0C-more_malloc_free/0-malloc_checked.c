@@ -2,15 +2,14 @@
 #include <stdlib.h>
 
 /**
-*
-*
-*
-*
+* malloc_checked - function that allocates memory
+* @b: size
+* Return: pointer
 **/
 
 void *malloc_checked(unsigned int b)
 {
-	int *p;
+	void *p;
 
 	p = malloc(sizeof(b));
 	if (p == NULL)
