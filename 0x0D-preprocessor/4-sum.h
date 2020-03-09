@@ -1,4 +1,4 @@
-#ifndef 4_SUM
-#define 4_SUM
+#ifndef SUM_FUNCTION
+#define SUM_FUNCTION
 #define SUM(x, y) ((x) + (y))
 #endif
