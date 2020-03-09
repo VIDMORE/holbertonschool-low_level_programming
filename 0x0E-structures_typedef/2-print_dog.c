@@ -2,11 +2,8 @@
 #include "dog.h"
 
 /**
-* init_dog - function that initialize a variable of type struct dog
+* print_dog - function that prints a struct do
 * @d: struc dog
-* @name: name of the dog;
-* @age: age of the dog
-* @owner: owner of the dog
 **/
 
 void print_dog(struct dog *d)
@@ -17,15 +14,10 @@ void print_dog(struct dog *d)
 			printf("Name: %s\n", d->name);
 		else
 			printf("Name: (nil)\n");
-		if (d->age)
 			printf("Age: %f\n", d->age);
-		else
-			printf("Age: (nil)\n");
 		if (d->owner)
 			printf("Owner: %s\n", d->owner);
 		else
 			printf("Owner: (nil)\n");
 	}
-	else
-		printf("\n");
 }
