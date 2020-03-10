@@ -42,10 +42,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		i++;
 	while (owner[j])
 		j++;
-	name_storage =  malloc(sizeof(i) + 1);
+	name_storage =  malloc(i + 1);
 	if (!name_storage)
 		return (NULL);
-	owner_storage = malloc(sizeof(j) + 1);
+	owner_storage = malloc(j + 1);
 	if (!owner_storage)
 	{
 		free(name_storage);
