@@ -1,3 +1,5 @@
+#include "dog.h"
+
 /**
 * free_dog -  function that frees dogs
 * @d: dog
