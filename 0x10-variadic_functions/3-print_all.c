@@ -29,11 +29,11 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", c);
 				opti[j].print_type(args);
+				c = ", ";
 				break;
 			}
 			j++;
 		}
-		c = ", ";
 		i++;
 	}
 	printf("\n");
