@@ -15,7 +15,7 @@ void print_all(const char * const format, ...);
 
 typedef struct options
 {
-	char type;
+	char *type;
 	void (*print_type)(va_list);
 
 } opts;

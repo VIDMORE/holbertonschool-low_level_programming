@@ -13,10 +13,11 @@ void print_all(const char * const format, ...)
 	va_list args;
 	char *c = "";
 	opts opti[] = {
-		{'c', print_c},
-		{'i', print_i},
-		{'f', print_f},
-		{'s', print_s},
+		{"c", print_c},
+		{"i", print_i},
+		{"f", print_f},
+		{"s", print_s},
+		{NULL, NULL}
 	};
 	va_start(args, format);
 
