@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (opti[j].type == format[i])
+			if (*opti[j].type == format[i])
 			{
 				printf("%s", c);
 				opti[j].print_type(args);
