@@ -10,7 +10,6 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0;
-	va_list args;
 	char *c = "";
 	opts opti[] = {
 		{"c", print_c},
@@ -19,9 +18,10 @@ void print_all(const char * const format, ...)
 		{"s", print_s},
 		{NULL, NULL}
 	};
+	va_list args;
 	va_start(args, format);
 
-	while (format[i] != '\0' && format != NULL)
+	while (format[i] && format)
 	{
 		j = 0;
 		while (j < 4)
@@ -31,7 +31,6 @@ void print_all(const char * const format, ...)
 				printf("%s", c);
 				opti[j].print_type(args);
 				c = ", ";
-				break;
 			}
 			j++;
 		}
