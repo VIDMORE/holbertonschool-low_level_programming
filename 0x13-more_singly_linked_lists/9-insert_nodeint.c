@@ -10,11 +10,11 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int i = 0, counter = 0;
-	listint_t *new, *temporal, *contador;
+	unsigned int i = 0;
+	listint_t *new, *temporal;
 
 	temporal = *head;
-	contador = *head;
+
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
