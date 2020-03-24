@@ -27,23 +27,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new;
 		return (new);
 	}
-	while (contador)
-	{
-		contador = contador->next;
-		counter++;
-	}
-	if (idx == counter)
-	{
-		new->next = NULL;
-		return (new);
-	}
-	else if (idx > counter)
-		return (NULL);
 
-	while (i < (idx - 1))
+	while (temporal != NULL && i < (idx - 1))
 	{
 		temporal = temporal->next;
 		i++;
+	}
+
+	if (temporal == NULL)
+	{
+		return (NULL);
 	}
 
 	new->next = temporal->next;
