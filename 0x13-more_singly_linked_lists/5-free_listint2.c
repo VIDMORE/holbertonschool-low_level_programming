@@ -7,18 +7,15 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *temporal, *saver;
-
-	temporal = *head;
+	listint_t *temporal;
 
 	if (head == NULL)
 		return;
 
-	while (temporal != NULL)
+	while (*head != NULL)
 	{
-		saver = temporal->next;
+		temporal = *head;
+		*head = temporal->next;
 		free(temporal);
-		temporal = saver;
 	}
-	*head = NULL;
 }
