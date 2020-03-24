@@ -11,7 +11,7 @@ void free_listint2(listint_t **head)
 
 	temporal = *head;
 
-	if (*head == NULL)
+	if (head == NULL)
 		return;
 
 	while (temporal != NULL)
