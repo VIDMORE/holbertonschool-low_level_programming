@@ -1,5 +1,5 @@
 #include "holberton.h"
-void bin_print(unsigned long int n);
+void reverse_print(unsigned long int n);
 
 /**
  * print_binary - prints the binary representation of a number
@@ -14,22 +14,22 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	bin_print(n);
+	reverse_print(n);
 }
 
 /**
- * bin_print - Function that prints a binary in reverse
+ * reverse_print - Function that prints a binary in reverse
  * @n: number
  */
 
-void bin_print(unsigned long int n)
+void reverse_print(unsigned long int n)
 {
 	if (n == 0)
 	{
 		return;
 	}
 	else
-		bin_print(n >> 1);
+		reverse_print(n >> 1);
 
 	_putchar((n & 1) + '0');
 }
