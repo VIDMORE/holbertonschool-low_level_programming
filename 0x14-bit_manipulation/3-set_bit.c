@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * set_bit - set a bit in a determinated index
+ * @n: number
+ * @index given
+ * Return: 1
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
