@@ -2,8 +2,8 @@
 
 /**
  * set_bit - set a bit in a determinated index
- * @n: number
- * @index given
+ * @n: number given
+ * @index: index
  * Return: 1
  */
 
