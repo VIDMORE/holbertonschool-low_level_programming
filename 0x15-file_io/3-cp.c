@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int filef, filet, readff, writeft;
+	int filef, filet, readff = 0, writeft;
 	char buffer[BUFF_SIZE];
 
 	if (argc != 3)
@@ -28,17 +28,19 @@ int main(int argc, char *argv[])
 	if (filet == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 
-	readff = read(filef, buffer, BUFF_SIZE);
-	writeft = write(filet, buffer,  readff);
-
-	if (readff == -1)
+	readff = BUFF_SIZE;
+	while (readff == BUFF_SIZE)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		readff = read(filef, buffer, BUFF_SIZE);
+		writeft = write(filet, buffer,  readff);
 	}
-	if (writeft == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-
+	if (readff == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		if (writeft == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (close(filef) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", filef), exit(100);
 	if (close(filet) == -1)
