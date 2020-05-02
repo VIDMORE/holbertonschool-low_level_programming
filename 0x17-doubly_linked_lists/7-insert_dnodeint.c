@@ -45,7 +45,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	new->next = temporal->next;
 	new->prev = temporal;
-	temporal->next->prev = new;
+	if (temporal->next != NULL)
+		temporal->next->prev = new;
 	temporal->next = new;
 
 	return (new);
