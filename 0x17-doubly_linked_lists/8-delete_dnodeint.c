@@ -28,13 +28,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	while (i < (index - 1))
+	while (previus != NULL && i < (index - 1))
 	{
 		previus = previus->next;
 		i++;
 	}
 
-	while (j < index)
+	while (sig != NULL && j < index)
 	{
 		sig = sig->next;
 		j++;
