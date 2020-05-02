@@ -27,7 +27,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->next = NULL;
 	new->prev = NULL;
 
-	while (i < (idx - 1))
+	while (temporal && i < (idx - 1))
 	{
 		temporal = temporal->next;
 		i++;
