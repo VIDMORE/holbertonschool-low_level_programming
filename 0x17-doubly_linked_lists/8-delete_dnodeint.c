@@ -42,6 +42,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		j++;
 	}
 
+	if (!previus || !sig)
+		return (-1);
+
 	previus->next = sig->next;
 	sig->next->prev = previus;
 	free(sig);
