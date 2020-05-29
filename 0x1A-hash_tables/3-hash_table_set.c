@@ -24,7 +24,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	tmp = node;
-
 	while (tmp != NULL)
 	{
 		if (strcmp(tmp->key, (char *)key) == 0)
