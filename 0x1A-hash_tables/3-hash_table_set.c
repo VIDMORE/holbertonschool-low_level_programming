@@ -11,11 +11,14 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
-	hash_node_t *node = ht->array[index], *tmp = NULL, *spot;
+	unsigned long int index = 0;
+	hash_node_t *node = NULL, *tmp = NULL, *spot;
 
 	if (!key || !value || strlen(key) <= 0)
 		return (0);
+	
+	index = key_index((const unsigned char *)key, ht->size);
+	node = ht->array[index];
 
 	if (node == 0)
 	{
