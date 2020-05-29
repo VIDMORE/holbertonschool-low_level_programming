@@ -14,20 +14,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = 0;
 	hash_node_t *node = NULL, *tmp = NULL, *spot;
 
-	if (!key || !value || strlen(key) <= 0)
+	if (!ht || !ht->array || !ht->size || !key || !*key || !value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 	node = ht->array[index];
 
-	if (node == 0)
-	{
-		ht->array[index] = allocate(key, value);
-		return (1);
-	}
-
 	tmp = node;
-	while (tmp != NULL)
+	while (tmp)
 	{
 		if (strcmp(tmp->key, (char *)key) == 0)
 		{
@@ -40,6 +34,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		tmp = tmp->next;
 	}
 	spot = allocate(key, value);
+	if (!spot)
+		return (0);
 	spot->next = node;
 	ht->array[index] = spot;
 
