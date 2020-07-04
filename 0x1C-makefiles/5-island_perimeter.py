@@ -7,14 +7,20 @@ def island_perimeter(grid):
 
     counter = 0
 
-    for row in range(len(grid)):
+    for row in range(len(grid) - 1):
         for col in range(len(grid[row])):
+            counter += 1
             if grid[row][col] == 1:
                 try:
                     if grid[row][col - 1] == 0:
-                        counter += 1
+                        counter -= 1
                     if grid[row + 1][col] == 0:
-                        counter += 1
+                        counter -= 1
+                    if grid[row - 1][col] == 0:
+                        counter -= 1
+                    if grid[row][col + 1] == 0:
+                        counter -= 1
                 except:
                     pass
-    return (counter * 2)
+                col += 1
+    return (counter)
