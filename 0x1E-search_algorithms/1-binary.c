@@ -1,5 +1,14 @@
 #include "search_algos.h"
 
+/**
+* binary_search - Binary search algorithm
+*
+* @array: Pointer to the beginning of an array
+* @size: Size of the array
+* @value: value to search
+* Return: Index or -1
+*/
+
 int binary_search(int *array, size_t size, int value)
 {
 
@@ -8,6 +17,16 @@ int binary_search(int *array, size_t size, int value)
 
 	return recu_binary_search(array, 0, size - 1, value);
 }
+
+/**
+* recu_binary_search - searches for a value in a sorted array recursively
+*
+* @array: Pointer to the beginning of an array
+* @left: index in the left
+* @right: index in the right
+* @value: value to search
+* Return: Index or -1
+*/
 
 int recu_binary_search(int *array, size_t left, size_t right, int value)
 {
