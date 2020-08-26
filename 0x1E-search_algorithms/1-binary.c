@@ -33,9 +33,9 @@ int recu_binary_search(int *array, size_t left, size_t right, int value)
 
 	printf("Searching in array: ");
 
-	for (i = left; i <= right; i++)
+	for (i = left; i <= right - 1; i++)
 		printf("%d, ", array[i]);
-	printf("%i\n", array[i]);
+	printf("%d\n", array[i]);
 
 	if (left == right)
 		return (-1);
