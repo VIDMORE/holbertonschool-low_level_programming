@@ -9,7 +9,7 @@
 * Return: Index or -1
 */
 
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
@@ -29,21 +29,18 @@ int binary_search(int *array, size_t size, int value)
 
 int recu_binary_search(int *array, size_t left, size_t right, int value)
 {
-	size_t i = 0, mid = 0, flag = 0;
+	size_t i = 0, mid = 0;
 
 	printf("Searching in array: ");
 
-	for (i = left; i <= right; i++)
-		if (!flag)
-			printf("%d", array[i]), flag = 1;
-		else
-			printf(", %d", array[i]);
-	printf("\n");
+	for (i = left; i < right; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 
 	mid = ((left + right) / 2);
 
-	if (array[mid] == value)
-		return (mid);
+	/* if (array[mid] == value)
+		return (mid); */
 
 	if (left == right)
 		return (-1);
