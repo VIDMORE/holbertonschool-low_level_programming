@@ -37,13 +37,13 @@ int recu_binary_search(int *array, size_t left, size_t right, int value)
 		printf("%d, ", array[i]);
 	printf("%d\n", array[i]);
 
-	if (left == right)
-		return (-1);
-
 	mid = ((left + right) / 2);
 
 	if (array[mid] == value)
 		return (mid);
+
+	if (left == right)
+		return (-1);
 
 	else if (array[mid] < value)
 		return (recu_binary_search(array, mid + 1, right, value));
