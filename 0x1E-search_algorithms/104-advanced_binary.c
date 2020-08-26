@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
-* binary_search - Binary search algorithm
+* advanced_binary - Binary search algorithm
 *
 * @array: Pointer to the beginning of an array
 * @size: Size of the array
