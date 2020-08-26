@@ -39,8 +39,8 @@ int recu_binary_search(int *array, size_t left, size_t right, int value)
 
 	mid = ((left + right) / 2);
 
-	/* if (array[mid] == value)
-		return (mid); */
+	if (array[mid] == value && array[mid - 1] != value)
+		return (mid);
 
 	if (left == right)
 		return (-1);
