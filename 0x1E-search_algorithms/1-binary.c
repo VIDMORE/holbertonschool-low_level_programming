@@ -15,7 +15,7 @@ int binary_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	return recu_binary_search(array, 0, size - 1, value);
+	return (recu_binary_search(array, 0, size - 1, value));
 }
 
 /**
@@ -52,7 +52,7 @@ int recu_binary_search(int *array, size_t left, size_t right, int value)
 		return (mid);
 
 	else if (array[mid] < value)
-		return recu_binary_search(array, mid + 1, right, value);
+		return (recu_binary_search(array, mid + 1, right, value));
 	else
-		return recu_binary_search(array, left, mid - 1, value);
+		return (recu_binary_search(array, left, mid - 1, value));
 }
