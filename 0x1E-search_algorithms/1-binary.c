@@ -18,7 +18,7 @@ int binary_search(int *array, size_t size, int value)
 }
 
 /**
-* recu_binary_search - searches for a value in a sorted array recursively
+* recu_binary_search - recursive function
 *
 * @array: Pointer to the beginning of an array
 * @left: index in the left
@@ -29,18 +29,13 @@ int binary_search(int *array, size_t size, int value)
 
 int recu_binary_search(int *array, size_t left, size_t right, int value)
 {
-	size_t i = 0, mid = 0, flag = 0;
+	size_t i = 0, mid = 0;
 
 	printf("Searching in array: ");
 
 	for (i = left; i <= right; i++)
-	{
-		if (!flag)
-			printf("%d", array[i]), flag = 1;
-		else
-			printf(", %d", array[i]);
-	}
-	printf("\n");
+		printf("%d, ", array[i]);
+	printf("%i\n", array[i]);
 
 	if (left == right)
 		return (-1);
